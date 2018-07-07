@@ -2,13 +2,16 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var tasks= require('./routes/tasks');
+//var posts=require('/.routes/post');
+//var details= require('./routes/details');
+//var routers=require('./routers/router_creation');
 
 var app = express();
-//app.use(morgan('combined'));
-//app.use(morgan('combined', { stream: winston.stream }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', routes);
+app.use('/tasks',tasks);
 app.use('/users', users);
 app.use('/admin', function(req, res){
   res.send({"welcome":"all"});

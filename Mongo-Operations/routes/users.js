@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 var users = require('../src/resources/users_operations')
-var posts = require('../src/resources/post_operations')
-var gets = require('../src/resources/get_operations')
+//var Info = require('../src/resources/users_operations')
+// var gets = require('../src/resources/post_operations')
 router.get('/all', function(req, res, next) {
   users.getAllUserDetails(req, res)
 });
@@ -28,12 +28,4 @@ router.put('/:userId', function(req, res, next) {
 router.delete('/:userId', function(req, res, next) {
   users.removeUserDetails(req, res)
 });
-
-router.get('/posts/my',function(req,res,next){
-	posts.getMyPostDetails(req,res)
-});
- router.post('/posts/my',function(req,res,next){
- 	posts.displayMyPostDetails(req,res)
- });
-
 module.exports = router;

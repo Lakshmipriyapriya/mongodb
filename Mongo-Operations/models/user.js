@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+//var Schema=mongoose.Schema;
 
 
 var User = new Schema({
@@ -25,6 +26,5 @@ var User = new Schema({
 	default: Date.now 
   }    
 });
-
 
 module.exports = mongoose.model('User', User);
