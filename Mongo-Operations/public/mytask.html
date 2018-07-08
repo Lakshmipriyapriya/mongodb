@@ -2,47 +2,149 @@
 <html>
 <head>
 	<title> MY TASKS</title>
-	<link rel="stylesheet" href="C:/Users/priya/Downloads/bootstrap/css/bootstrap.min.css">
-	 <script src="C:/Users/priya/Downloads/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap-responsive.min.css">
+  <script src="./bootstrap/js/jquery.min.js"></script>
+	 <script src="./bootstrap/js/bootstrap.js"></script>
+   
+   <style>
+     .pagination{
+      display: inline-block;
+     }
+   </style>
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">         
           <div class="nav-collapse collapse">
             <ul class="nav">
-            	<li><a class="logo" href="#"> <img src="../logos/logo-design.jpg" style="max-width:60px; margin-top:-20px; padding-right:40px;"> </a></li>
-            	<li>
-              <li ><a href="./task-res.html">My tasks</a></li>
-              <li><a href="./Sign-up.html">Sign up</a></li>
-              <li><a href="./Login-res.html">Login</a></li>
-             
-            </ul>
-            
+              <li><a class="logo" href="#"> <img src="./logo/logo-design.jpg" style="max-width:60px; margin-top:-20px; padding-right:40px;"> </a></li>
+              
+              <a href="#myModal" role="button" class="btn " data-toggle="modal">Login</a>
+   <a href="#mineModal" role="button" class="btn " data-toggle="modal">Sign in</a>
+   <a href="#Taskmodal" role="button" class="btn " data-toggle="modal">Task</a>
+   
+
+</ul>
+            </div>
+           </div>
           </div>
-        </div>
-      </div>
+       </div>
+      
      <div class="text-center">
      	<div class="container">
      		<div class="span9">
      			<div class="hero-unit">
-     				
-     				
-     	<h1>Welcome to our page!</h1>
-     	<p class="text-info"> <srong>This is the simple web page for Task List with the basic checklists.
-     		Please click here <a href="./Sign-up.html"><strong>Login</strong></a> to create an account in  Task list.
-     	</srong></p>
-     	<p>click here to add your tasks:</p>
-     	<!-- <button type="button" class="btn" style="padding-left: 30px; padding-right: 30px;" >
-     		<a href="./tasksAdd.html">+</a>				
-     	</button>
- -->
- 		<button type="button"><a href="./tasksAdd.html">+</a></button>     				
-     	</div>
+     	<h1>My Tasks!</h1><br>
+       <input type="text" placeholder="Title"><br>
+      <input type="text" placeholder="Description" ><br>
+      <input type="text" placeholder="Owner" ><br>
+      <input type="text" placeholder="Status" ><br>
+      <input type="text" placeholder="ApplicationId" ><br>
+     	<button type="button" class="btn btn-primary">
+        Add
+      </button>
+        <button type="Reset" class="btn">
+        cancle
+      </button>
+
+    <div class="container-fluid">
+     <div class="pagination">
+      <ul class="pagination">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+       <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+      </div>
      </div>
-    </div>
+   </div>
 </div>
-
-
+<div id="myModal" class="modal hide fade" id="modaldata1" tabindex="-1" role="dialog" aria-labelledby="Provide details to Login" aria-hidden="true">
+  <div class="modal-header">
+    <h3 id="myModalLabel">Login</h3>
+  </div>
+  <div class="modal-body">
+    <input type="text" placeholder="Email address" required="Email"><br>
+      <input type="Password" placeholder="Password" ><br><br>
+  </div>
+  <div class="modal-footer">
+     <button class="btn btn-primary">Login</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">cancle</button>
+   
+  </div>
+  <script>
+$(document).ready(function(){
+    $("#mymodel").click(function(){
+        $("modeldata").modal();
+    });
+});
+</script>
+</div>
+<div id="mineModal" class="modal hide fade" id="minedata" href="#" tabindex="-1" role="dialog" aria-labelledby="Provide details to Login" aria-hidden="true">
+  <div class="modal-header">
+    <h3 id="myModalLabel">Login</h3>
+  </div>
+  <div class="modal-body">
+    <input type="text" placeholder="FirstName"><br>
+      <input type="text" placeholder="LastName"><br>
+      <input type="text" placeholder="Email address" required="Email"><br>
+      <input type="Password" placeholder="Password" ><br><br>
+      <input type="checkbox" class ="checkbox">Remember me<br><br>
+  </div>
+  <div class="modal-footer">
+     <button class="btn btn-primary">Sign in</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">cancle</button>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function()){
+      $("mineModal").click(function(){
+        $("minedata").modal();
+      })
+    }
+  </script>
+</div>
+<div id="Taskmodal" class="modal hide fade" id="modaldatas" href="#" tabindex="-1" role="dialog" aria-labelledby="Provide details to Addtask details" aria-hidden="true">
+  <div class="modal-header">
+    <h3 id="myModalLabel">Add Tasks</h3>
+  <div class="modal-body">
+       <class="check-box">
+      <input type="checkbox">
+      Task1
+  <br>
+      <class="check-box">
+      <input type="checkbox">
+      Task2
+  <br>
+      <class="check-box">
+      <input type="checkbox">
+      Task3
+    </class="check-box">
+  <br>
+      <class="check-box">
+      <input type="checkbox">
+      Task4
+  <br>
+      <class="check-box">
+      <input type="checkbox">
+      Task5
+  </div>
+  <div class="modal-footer">
+     <button class="btn btn-primary">Add Task</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Remove</button>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function()){
+      $("#Taskmodal").click(function(){
+        $("modaldatas").modal();
+      })
+    }
+  </script>
+</div>
+</div>
 </body>
 </html>
